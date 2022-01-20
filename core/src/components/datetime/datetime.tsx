@@ -1366,7 +1366,7 @@ export class Datetime implements ComponentInterface {
         translucent
         overlayIndex={1}
         arrow={false}
-        onWillPresent={(ev) => {
+        onWillPresent={ev => {
           /**
            * Intersection Observers do not consistently fire between Blink and Webkit
            * when toggling the visibility of the popover and trying to scroll the picker
