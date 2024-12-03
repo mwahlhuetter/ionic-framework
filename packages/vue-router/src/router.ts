@@ -475,6 +475,9 @@ export const createIonRouter = (
           locationHistory.clearHistory(routeInfo);
           locationHistory.add(routeInfo);
         }
+        if (historySize === 1 && historyDiff === -1 && delta === -1 && routeInfo.routerAction === "pop") {
+          locationHistory.add(routeInfo);
+        }
       } else {
         locationHistory.add(routeInfo);
       }
